@@ -10,6 +10,9 @@ a = conn.cursor()
 
 def login():
     while True:
+        print("╔════════════════════════════════════════════════════════════════════════════╗")
+        print("                                AREA DE LOGIN                                 ")
+        print("╚════════════════════════════════════════════════════════════════════════════╝")
         username = input("Username: ")
         password = getpass.getpass('Digite sua senha: ')
         #h = hashlib.md5(password.encode()) h.hexdigest()
@@ -23,6 +26,7 @@ def login():
         else:
             conn.commit()
             print("Falha no login")
+            os.system("cls")
 
 def menuLogin():
     while True:
